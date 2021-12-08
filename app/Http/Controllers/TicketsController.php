@@ -53,7 +53,7 @@ class TicketsController extends Controller
 
         $ticket->save();
 
-        $mailer->sendTicketInformation(auth()->user(), $ticket);
+        $mailer->sendTicketInformation(\Auth::user(), $ticket);
 
         return redirect()->back()->with("status", "A ticket with ID: #$ticket->ticket_id has been opened.");
     }

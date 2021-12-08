@@ -49,7 +49,7 @@
                                     </td>
                                     <td>
                                         @if ($ticket->status === 'Open')
-                                            <span style="background: #78b058; color: white; padding: 3px; border-radius: 3px">{{ $ticket->status }}</span>
+                                            <span style="background: rgba(46,139,87,0.93); color: white; padding: 3px; border-radius: 3px; box-shadow: 2px 2px darkseagreen; ">{{ $ticket->status }}</span>
                                         @else
                                             <span style="background: #ad0a0a; color: white; padding: 2px" >{{ $ticket->status }}</span>
                                         @endif

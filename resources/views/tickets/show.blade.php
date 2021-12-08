@@ -7,7 +7,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="row my-3">
                 <div class="col-12">
-                   <p> #{{ $ticket->ticket_id }} </p>
+                   <p> #ID: {{ $ticket->ticket_id }} </p>
                     <p> Title: {{ $ticket->title }} </p>
                 </div>
 
@@ -31,10 +31,10 @@
 
                     <div class="comments my-2">
                         @foreach ($comments as $comment)
-                            <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{"default"}}@else{{"success"}}@endif">
-                                <div class="panel panel-heading">
+                            <div class="pt-3 panel-@if($ticket->user->id === $comment->user_id) {{"default"}}@else{{"success"}}@endif">
+                                <div class="text-primary fw-bold">
                                     {{ $comment->user->name }}
-                                    <span class="pull-right">{{ $comment->created_at->format('Y-m-d') }}</span>
+                                    <span class="pull-right text-muted">{{ $comment->created_at->format('Y-m-d') }}</span>
                                 </div>
 
                                 <div class="panel panel-body">
