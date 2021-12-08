@@ -4,8 +4,7 @@
 
 @section('content')
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
-    <script src="{{ mix('js/app.js') }}"></script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
     <div class="row d-flex justify-content-center bg-white">
@@ -51,9 +50,9 @@
                                     </td>
                                     <td>
                                         @if ($ticket->status === 'Open')
-                                            <span class="label label-success">{{ $ticket->status }}</span>
+                                            <span style="background: #78b058; color: white; padding: 3px; border-radius: 3px">{{ $ticket->status }}</span>
                                         @else
-                                            <span class="label label-danger">{{ $ticket->status }}</span>
+                                            <span style="background: #ad0a0a; color: white; padding: 2px" >{{ $ticket->status }}</span>
                                         @endif
                                     </td>
                                     <td>{{ $ticket->updated_at }}</td>
