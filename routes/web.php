@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/new_ticket', [TicketsController::class, 'create']);
 Route::post('/new_ticket', [TicketsController::class, 'store']);
 Route::get('my_tickets', [TicketsController::class, 'userTickets']);
+Route::get('tickets/{ticket_id}', [TicketsController::class, 'show']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

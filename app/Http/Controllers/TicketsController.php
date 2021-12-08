@@ -52,4 +52,13 @@ class TicketsController extends Controller
 
         return view('tickets.user_tickets', compact('tickets', 'categories'));
     }
+
+    public function show($ticket_id)
+    {
+        $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+
+        $category = $ticket->category;
+
+        return view('tickets.show', compact('ticket', 'category'));
+    }
 }
