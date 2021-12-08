@@ -24,9 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tickets = Ticket::where('user_id', auth()->user()->id)->paginate(10);
-        $categories = Category::all();
-
-        return view('home', compact('tickets', 'categories'));
+        return view('home');
     }
 }

@@ -29,7 +29,7 @@
 
                     <hr>
 
-                    <div class="comments">
+                    <div class="comments my-2">
                         @foreach ($comments as $comment)
                             <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{"default"}}@else{{"success"}}@endif">
                                 <div class="panel panel-heading">
@@ -51,7 +51,7 @@
                             <input type="hidden" name="ticket_id" value="{{ $ticket->id }}">
 
                             <div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
-                                <textarea rows="10" id="comment" class="form-control" name="comment"></textarea>
+                                <textarea rows="4" id="comment" class="form-control" name="comment"></textarea>
 
                                 @if ($errors->has('comment'))
                                     <span class="help-block">

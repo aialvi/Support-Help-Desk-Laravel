@@ -6,13 +6,12 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-
     <div class="row d-flex justify-content-center bg-white">
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <div class="row my-3">
                     <div class="col-12">
-                        <i class="fa fa-ticket">Support Tickets</i>
+                        <i class="fa fa-ticket">My Tickets</i>
                     </div>
                 </div>
 

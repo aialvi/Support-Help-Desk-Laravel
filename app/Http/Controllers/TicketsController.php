@@ -12,6 +12,11 @@ use Illuminate\Support\Str;
 
 class TicketsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $tickets = Ticket::paginate(10);
@@ -48,7 +53,7 @@ class TicketsController extends Controller
 
         $ticket->save();
 
-        $mailer->sendTicketInformation(Auth::user(), $ticket);
+        $mailer->sendTicketInformation(auth()->user(), $ticket);
 
         return redirect()->back()->with("status", "A ticket with ID: #$ticket->ticket_id has been opened.");
     }

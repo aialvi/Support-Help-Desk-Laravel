@@ -36,13 +36,11 @@
                 </div>
             @endif
 
-            <div class="max-w-6xl mx-auto">
-                <div class="btn btn-danger shadow md:rounded-lg">
-
-                 <a href="new_ticket"> <button style="color: white ; font-size: 16px; cursor: pointer; background: #104156; padding: 15px ;border-radius: 4px;"> Create a Ticket </button></a>
-
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row my-3">
+                       Welcome to Supporty Support Desk!
+                    </div>
                 </div>
-            </div>
         </div>
     </body>
 </html>
