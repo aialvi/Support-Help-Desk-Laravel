@@ -30,7 +30,7 @@ class TicketsController extends Controller
 
         $ticket = new Ticket([
             'title'     => $request->input('title'),
-            'user_id'   => Auth::id(),
+            'user_id'   => auth()->user()->id,
             'ticket_id' => strtoupper(Str::random(40)),
             'category_id'  => $request->input('category'),
             'priority'  => $request->input('priority'),
