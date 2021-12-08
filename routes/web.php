@@ -30,4 +30,7 @@ Route::post('comment', [CommentsController::class, 'postComment']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+    Route::get('tickets', [TicketsController::class,'index']);
+    Route::post('close_ticket/{ticket_id}', [TicketsController::class,'close']);
+});
