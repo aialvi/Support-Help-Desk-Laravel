@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TicketsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/new_ticket', [TicketsController::class, 'create']);
+Route::post('/new_ticket', [TicketsController::class, 'store']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

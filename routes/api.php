@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
-    Route::get('new_ticket', 'TicketsController@create');
-    Route::post('new_ticket', 'TicketsController@store');
+
     return $request->user();
 });
