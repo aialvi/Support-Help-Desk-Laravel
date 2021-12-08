@@ -4,9 +4,11 @@
 
 @section('content')
     <div class="row d-flex justify-content-center">
-        <div class="col-10 col-offset-1">
+        <div class="col-10 col-offset-1 bg-white px-5 py-2 rounded-3">
             <div class="panel panel-default">
-                <div class="panel-heading">Open New Ticket</div>
+                <div class="row my-4">
+                    <div>Open New Ticket</div>
+                </div>
 
                 <div class="panel-body">
                     @include('includes.flash')
@@ -14,7 +16,7 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/new_ticket') }}">
                         {!! csrf_field() !!}
 
-                        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+                        <div class="my-3 form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title" class="col-4 control-label">Title</label>
 
                             <div class="col-6">
@@ -28,7 +30,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
+                        <div class="my-3 form-group{{ $errors->has('category') ? ' has-error' : '' }}">
                             <label for="category" class="col-4 control-label">Category</label>
 
                             <div class="col-6">
@@ -47,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('priority') ? ' has-error' : '' }}">
+                        <div class="my-3 form-group{{ $errors->has('priority') ? ' has-error' : '' }}">
                             <label for="priority" class="col-4 control-label">Priority</label>
 
                             <div class="col-6">
@@ -66,7 +68,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
+                        <div class="my-3 form-group{{ $errors->has('message') ? ' has-error' : '' }}">
                             <label for="message" class="col-4 control-label">Message</label>
 
                             <div class="col-6">
@@ -81,7 +83,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-6 col-offset-4 my-2">
+                            <div class="col-6 col-offset-4 my-3">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-ticket"></i> Open Ticket
                                 </button>

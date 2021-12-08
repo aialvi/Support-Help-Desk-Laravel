@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Ticket;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $tickets = Ticket::where('user_id', auth()->user()->id)->paginate(10);
+        $categories = Category::all();
+
+        return view('tickets.user_tickets', compact('tickets', 'categories'));
     }
 }

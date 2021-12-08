@@ -36,10 +36,10 @@
                 </div>
             @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="mt-8 bg-white dark:bg-blue-800 overflow-hidden shadow sm:rounded-lg">
+            <div class="max-w-6xl mx-auto">
+                <div class="btn btn-danger shadow md:rounded-lg">
 
-                 <a href="new_ticket"> <button style="cursor: pointer;" class="btn-primary px-5 py-4"> Create a Ticket </button></a>
+                 <a href="new_ticket"> <button style="color: white ; font-size: 16px; cursor: pointer; background: #104156; padding: 15px ;border-radius: 4px;"> Create a Ticket </button></a>
 
                 </div>
             </div>
