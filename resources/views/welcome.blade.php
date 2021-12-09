@@ -38,7 +38,7 @@
 
                 <div class="col-md-10 col-md-offset-1">
                     <div class="row my-3">
-                       Welcome to Supporty Support Desk!
+                      <p> Welcome to Supporty Support Desk!</p>
                     </div>
                 </div>
         </div>

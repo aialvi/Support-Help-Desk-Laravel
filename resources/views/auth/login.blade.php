@@ -65,9 +65,24 @@
                             </div>
                         </div>
                     </form>
+                    <hr>
+                    <div class="row d-flex justify-content-center mt-3">
+                        <div class="offset-2 col-4">
+                            <b>Admin</b>
+                            <p><span class="badge bg-danger">Email</span> admin@test.com</p>
+                            <p><span class="badge bg-primary">Pass</span> 12345678</p>
+                        </div>
+                        <div class="offset-1 col-4">
+                            <b>User</b>
+                            <p><span class="badge bg-danger">Email</span> user@test.com</p>
+                            <p><span class="badge bg-primary">Pass</span> 12345678</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 </div>
 @endsection
