@@ -41,10 +41,10 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-$app->singleton(
-    Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\mailers\AppMailer::class
-);
+//$app->singleton(
+//    Illuminate\Contracts\Debug\ExceptionHandler::class,
+//    App\Mailers\AppMailer::class
+//);
 
 /*
 |--------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\mailers\AppMailer;
+use App\Mailers\AppMailer;
 use App\Models\Category;
 use App\Models\Ticket;
 use Auth;
