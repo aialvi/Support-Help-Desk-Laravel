@@ -3,11 +3,13 @@
 @section('title', 'All Tickets')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <i class="fa fa-ticket"> Tickets</i>
+    <div class="row row d-flex justify-content-center bg-white">
+        <div class="col-10 col-offset-1">
+            <div class="row pt-3 pb-4 my-5 rounded-3">
+                <div class="row mb-3">
+                    <div class="col-10">
+                        <b><i class="fas fa-ticket"> Tickets</i></b>
+                    </div>
                 </div>
 
                 <div class="panel-body">

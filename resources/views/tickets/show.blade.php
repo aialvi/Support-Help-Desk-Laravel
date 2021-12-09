@@ -11,6 +11,7 @@
                     <p> Title: {{ $ticket->title }} </p>
                 </div>
 
+
                 <div class="panel-body">
                     @include('includes.flash')
 
