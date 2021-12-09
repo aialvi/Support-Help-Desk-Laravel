@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mailers\AppMailer;
+use App\mailers\AppMailer;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 

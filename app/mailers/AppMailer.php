@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mailers;
+namespace App\mailers;
 
 use App\Ticket;
 use Illuminate\Contracts\Mail\Mailer;
@@ -14,6 +14,7 @@ class AppMailer
     protected $subject;
     protected $view;
     protected $data = [];
+
 
     public function __construct(Mailer $mailer)
     {
@@ -50,6 +51,7 @@ class AppMailer
         return $this->deliver();
     }
 
+    // deliver mail
     public function deliver()
     {
         $this->mailer->send($this->view, $this->data, function ($message) {

@@ -43,7 +43,7 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Mailers\AppMailer::class
+    App\mailers\AppMailer::class
 );
 
 /*
