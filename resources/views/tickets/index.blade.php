@@ -5,8 +5,8 @@
 @section('content')
     <div class="row row d-flex justify-content-center bg-white">
         <div class="col-10 col-offset-1">
-            <div class="row pt-3 pb-4 my-5 rounded-3">
-                <div class="row mb-3">
+            <div class="row pt-3 pb-4 my-5 rounded-3 border-dark">
+                <div class="card-header mb-3">
                     <div class="col-10">
                         <b><i class="fas fa-ticket"> Tickets</i></b>
                     </div>
@@ -19,6 +19,7 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <th>User</th>
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Status</th>
@@ -30,6 +31,13 @@
                             @foreach ($tickets as $ticket)
                                 <tr>
                                     <td>
+                                        @foreach ($users as $user)
+                                            @if ($user->id === $ticket->user_id)
+                                                {{ $user->name }}
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                    <td>
                                         @foreach ($categories as $category)
                                             @if ($category->id === $ticket->category_id)
                                                 {{ $category->name }}
@@ -38,14 +46,14 @@
                                     </td>
                                     <td>
                                         <a href="{{ url('tickets/'. $ticket->ticket_id) }}">
-                                            #{{ $ticket->ticket_id }} - {{ $ticket->title }}
+                                            {{ $ticket->title }}
                                         </a>
                                     </td>
                                     <td>
                                         @if ($ticket->status === 'Open')
-                                            <span class="label label-success">{{ $ticket->status }}</span>
+                                            <span class="badge bg-success">{{ $ticket->status }}</span>
                                         @else
-                                            <span class="label label-danger">{{ $ticket->status }}</span>
+                                            <span class="badge bg-danger">{{ $ticket->status }}</span>
                                         @endif
                                     </td>
                                     <td>{{ $ticket->updated_at }}</td>

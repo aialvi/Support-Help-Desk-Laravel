@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 use App\Mailers\AppMailer;
 use App\Models\Category;
 use App\Models\Ticket;
+use App\Models\User;
 use Auth;
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -21,8 +21,9 @@ class TicketsController extends Controller
     {
         $tickets = Ticket::paginate(10);
         $categories = Category::all();
+        $users = User::all();
 
-        return view('tickets.index', compact('tickets', 'categories'));
+        return view('tickets.index', compact('tickets', 'categories', 'users'));
     }
 
     public function create()

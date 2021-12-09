@@ -6,11 +6,11 @@
     <div class="container">
         <div class="row d-flex justify-content-center bg-white">
             <div class="col-md-10 col-md-offset-1">
-                <div class="row my-3">
-                    <div class="panel-heading">Dashboard</div>
+                <div class="card my-3">
+                    <div class="card-header">Dashboard</div>
 
-                    <div class="panel-body">
-                        <p>You are logged in!</p>
+                    <div class="container p-3">
+
 
                         @if (\Auth::user()->is_admin)
                             <p>

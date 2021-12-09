@@ -5,14 +5,14 @@
 @section('content')
     <div class="row d-flex justify-content-center bg-white py-5 px-3 rounded-2">
         <div class="col-md-10 col-md-offset-1">
-            <div class="row my-3">
-                <div class="col-12">
+            <div class="row mt-3">
+                <div class="col-12 card-header mb-3">
                    <p> #ID: {{ $ticket->ticket_id }} </p>
                     <p> Title: {{ $ticket->title }} </p>
                 </div>
 
 
-                <div class="panel-body">
+                <div class="container">
                     @include('includes.flash')
 
                     <div class="ticket-info">
